@@ -8,7 +8,8 @@ app.use(express.urlencoded({ extended: true }));
 const port = 3000;
 
 app.get("/", (req, res) => {
-    res.render("index.ejs");
+    let sayi = 5;
+    res.render("index.ejs", { number: sayi });
 })
 
 app.listen(port, () => {
